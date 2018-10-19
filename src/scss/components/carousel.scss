@@ -1,0 +1,128 @@
+.carousel-box-shadow {
+	background: #F7F7F8;
+	box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
+	// box-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
+
+
+.carousel-container {
+	@include cf;
+	text-align: left;
+
+	@include responsive(medium) {
+		display: flex;
+
+		.left-half,
+		.right-half {
+			width: 50%;
+		}
+	}
+
+	&.blue {
+
+		.left-half {
+			background: $brand-color-2;
+
+			h3,
+			p {
+				color: white;
+			}
+		}
+		
+		h3,
+		strong {
+			color: $brand-color-2;
+		}
+	}
+
+	&.orange {
+
+		.left-half {
+			background: $brand-color-4;
+
+			h3,
+			p {
+				color: white;
+			}
+		}
+
+		h3,
+		strong {
+			color: $brand-color-4;
+		}
+	}
+
+	&.green {
+
+		.left-half {
+			background: $brand-color-3;
+
+			h3,
+			p {
+				color: white;
+			}
+		}
+
+		h3,
+		strong {
+			color: $brand-color-3;
+		}
+	}
+
+	.left-half,
+	.right-half {
+
+		h3 {
+			text-align: center;
+		}
+
+		// p:last-child {
+		// 	margin-bottom: 0;
+		// }
+	}
+
+	.right-half {
+		padding: $base-spacing-unit;
+
+		@include responsive(medium) {
+			padding: 40px 45px;
+		}
+	}
+}
+
+@include responsive(small) {
+
+	.slick-track[style] {
+	    width: 100% !important;
+	    transform: none !important;
+	}
+	.slick-slide[style] {
+	    display: block !important;
+	}
+
+	.slick-list {
+		height: auto !important;
+	}
+
+	.small-carousel .carousel-box-shadow {
+		background: transparent;
+		text-align: center;
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	#siriSlider .carousel {
+		max-height: 100%;
+		min-height: auto !important;
+	}
+}
+
+@include responsive(medium) {
+	.small-carousel {
+		width: 432px;
+		margin: 0 auto;
+	}
+}

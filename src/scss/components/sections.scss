@@ -1,0 +1,177 @@
+/*** TABLE OF CONTENTS
+/* 1. OVERVIEW
+/* 2. CANDIDATE RESEARCH
+/* 3. LEVERAGING THE DATA
+/* 4. SUCCESS STORIES
+/* 5. CANDIDATE INSIGHTS
+/* 6. CONTACT US SURVEY
+***/
+
+/*** 1. Overview ***/
+#intro > div.container > div.intro-pop {
+	text-align: right;
+}
+#intro > div.container > div.intro-pop a {
+	color: #FFF;
+}
+
+/*** 2. Candidate Research ***/
+#insights p {
+	text-align: center;
+    margin-bottom: 12px !important;
+}
+#insights .container .insight-list-wrapper {
+	position: relative;
+	margin: 0 auto;
+	max-width:400px;
+}
+ul.insight-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-bottom:10px;
+	line-height: 1;
+}
+ul.insight-list li {
+	padding-left: 1em; 
+	text-indent: -.7em;
+}
+ul.insight-list li::before {
+	content: "• ";
+	color: #466ea5;
+	font-size: 2em;
+	vertical-align: middle;
+}
+#more-insights {
+	cursor: pointer;
+	font-weight: 500;
+	text-decoration: underline;
+	float:right;
+	@include cf;
+	&:hover {
+		font-weight: 700;
+	}
+}
+#introPop {
+	cursor:pointer;
+	&:hover{text-decoration:underline;}
+}
+
+p.text-intro {
+	text-align: center;
+}
+
+/*** 3. Leveraging the Data ***/
+#data .container .skinny-container .inner-wrapper {
+	margin-left: 3em;
+}
+#data .container .skinny-container .data-wrapper  {
+	float:left;
+	text-decoration: none;
+	margin: 0 auto;
+	padding: 0;
+	@include cf;
+}
+#data .container .skinny-container .data-wrapper .data-card {
+	position: relative;
+	text-align: center;
+	border: 1px solid #cacbce;
+	margin: 1em;
+	height:18.5em;
+	width:17.3em;
+	background-color: #FFF !important;
+	box-shadow: 0 3px 5px 0 rgba(0,0,0,0.08);
+	transition: box-shadow 0.3s ease-in-out;
+
+	&.box-shadow:hover {  
+	  box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.1);
+	}
+}
+#data .container .skinny-container .data-wrapper .data-card img {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#data .container .skinny-container .data-wrapper .data-card p {
+	position: absolute;
+	top: 55%;
+	color:#67696f;
+	line-height: 1.5;
+	padding: 0 1em;
+}
+
+/*** 4. Success Stories ***/
+#stories .success-story-wrapper {
+	margin-left:25%;
+	.row {
+		margin-bottom:32px !important;
+	}
+}
+.story-card {
+	text-align: center;
+}
+.story-card img {
+	box-shadow: 0 3px 5px 0 rgba(0,0,0,0.08);
+	transition: box-shadow 0.3s ease-in-out;
+	&:hover {  
+  		box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.1);
+	}
+}
+.story-card p {
+    margin: 15px 30px;
+	font-weight: bold;
+	color: #4A71A2;
+	text-align: left;
+}
+.story-card .download {
+	margin-top:12px;
+}
+.box-shadow {  
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.box-shadow:hover {  
+  box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1100px) {
+	#stories .success-story-wrapper {
+		margin-left:auto;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#stories .success-story-wrapper {
+		margin-left:auto;
+	}
+	.story-card {
+    	margin-bottom: 2em !important;
+	}
+	.insight-list-wrapper {
+    	margin-bottom: 2em !important;
+	}
+}
+
+/*** 5. Library (Candidate Insights) ***/
+
+
+/*** 6. Contact Us Survey ***/
+#contact.panel-block{
+    @include gradient-vertical(#343741,#343741);
+}
+#contact p {
+	color: #FFF;
+}
+#contactUsForm > div.col-md-6.right-form > div > label,
+#contactUsForm > div.col-md-6.left-form > div > label {
+	color: #FFF;
+}
+#contactUsForm label {
+	color:#FFF;
+}
+#survey .cp-survey {
+	margin-top:3em;
+}
+

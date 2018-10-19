@@ -1,0 +1,123 @@
+.footer {
+    position: relative;
+}
+
+.footer-1 {
+    background: #202020;
+    padding: 25px 0;
+    color: white;
+    
+
+    a {
+        color: $brand-color-4;
+        font-weight: bold;
+        @include transition(.2s);
+        padding-bottom: 2px;
+
+        &:hover {
+            border-bottom: 1px solid $brand-color-4;
+        }
+    }
+
+    @include responsive(medium) {
+        padding: 50px 0;
+        font-size: 16px;
+    }
+
+    @include responsive(small) {
+        text-align: center;
+    }
+
+}
+
+.footer-2 {
+    background: #151515;
+    padding: 25px 0;
+    color: #ABABAB;
+    font-weight: bold;
+
+    @include responsive(medium) {
+        padding: 50px 0;
+        font-size: 16px;
+    }
+
+    @include responsive(small) {
+        text-align: center;
+    }
+}
+
+.social-links {
+    @include reset-list-style;
+    padding: 20px 0 0;
+    margin-top: 0;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    a {
+        width: 44px;
+        height: 44px;
+        line-height: 40px;
+        font-size: 20px;
+        border: 2px solid #909090;
+        color: #909090;
+        border-radius: 50%;
+        display: block;
+        text-align: center;
+        @include transition(.2s);
+
+        &:hover {
+            color: white;
+            border-color: white;
+        }
+    }
+
+    @include responsive(medium) {
+        text-align: right;
+        margin-top: -10px;
+        padding: 0;
+    }
+}
+.mpglogos {
+    @include reset-list-style;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 500px;
+
+    li {
+        display: inline-block;
+        margin: 0 30px 34px 0;
+
+        &:first-child {
+            display: block;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include responsive(small) {
+            display: block;
+            margin-right: 0;
+        }
+
+        a:hover {
+            border: 0 !important;
+        }
+    }
+}
+
+.mpg-logo {width:280px;}
+.mpgs-logo {width:180px;}
+.mp-logo, 
+.rm-logo {width:150px;}
+.exp-logo {
+    width: 130px;
+}

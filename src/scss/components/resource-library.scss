@@ -1,0 +1,171 @@
+.resource-library {
+	padding: 1em 0;
+	position: relative;
+	background-color: lighten(#ACADB3, 20%);/*light gray*/
+
+	h2 {
+		font-family: "Helvetica Neue";
+		color: #6390C6;
+		margin: 1.1em 0 0.5em 0;
+		text-align: left;
+	}
+
+	h3 {
+		font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+		color: #74757e;
+		text-align: left;
+		line-height: 32px;
+		font-size: 28px;
+		margin-left: 15px;
+}
+
+	p {
+		font-family: "Helvetica Neue";
+		color: #404040;
+		line-height: 24px;
+	}
+
+	a {
+		font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+		text-align: center;
+	}
+}
+
+.resource-panel {
+	margin: 0 auto;
+	max-width: 800px;
+	position: relative;
+	display: block;
+	padding: 2em 0;
+}
+
+.resource-tile {
+	position: relative;
+	display: block;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 1em 0.5em;
+}
+
+.country-tile {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 1em 0.5em;
+}
+
+.resource-upload {}
+
+.cp-cta-resource {
+	width: 230px;
+	position: relative;
+	border: 2px solid #6390c6;
+	font-weight: 700;
+    margin-top: 2em!important;
+	padding: 0.5em 0.8em;
+    text-align: center!important;
+	float: right;
+	clear: both;
+
+	&:hover {
+		border: 3px solid darken( #6390c6, 10% );
+		font-weight: 900;
+		color: darken( #6390c6, 10% );
+	}
+}
+
+.cp-cta-info {
+	width: 230px;
+	margin: 0 auto;
+	position: relative;
+	border: 2px solid #6390c6;
+	font-weight: 700;
+	padding: 0.5em 0.8em;
+    text-align: center!important;
+	float: right;
+	clear: both;
+
+	&:hover {
+		border: 3px solid darken( #6390c6, 10% );
+		font-weight: 900;
+		color: darken( #6390c6, 10% );
+	}
+}
+
+.cp-resource-img {
+	width: 200px;
+	height: auto;
+}
+
+.cp-country-name {
+    margin-top: 2.2em!important;
+   	padding: 0 !important;
+	text-align: center !important;
+}
+
+.cp-flag-img {
+	width: 120px;
+	height: auto;
+}
+
+
+@media only screen and (max-width: 768px) {
+	//make it sparkle...
+	.leaf-library {
+		height: auto;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	
+	.resource-library {
+
+		h2 {
+			text-align: center;
+		}
+
+		h3 {
+			text-align: center;
+		}
+
+		p {
+			text-align: center;
+		}
+	}
+	.resource-panel {
+		text-align: center;
+		margin: 0 auto;
+
+		h2 {
+			margin-left:0.5em;
+		}
+	}
+
+	.resource-tile {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.cp-cta-resource {
+		text-align: center;
+		margin: 0 auto;
+		height: auto;
+		width: 100% !important;
+	}
+
+	.cp-cta-info {
+		text-align: center;
+		margin: 0 auto;
+		height: auto;
+		width: 100% !important;
+	}
+
+	.cp-resource-img {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.cp-flag-img {
+		text-align: center;
+		margin: 0 auto;
+	}
+}

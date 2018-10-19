@@ -1,0 +1,165 @@
+.cp-title {
+    text-align:center;
+    font-family:"Helvetica", "Arial", sans-serif;
+    font-weight:200;
+    font-size:20px;
+    margin-top:15px;
+    margin-bottom:30px;
+}
+
+// .survey-results-wrapper {display:none;}
+form#survey-form .survey-response {display:none;}
+form#survey-form label {
+    margin-bottom: 0px !important;
+}
+.cp-btn:disabled {
+    background-color:#aacdee;
+}
+.survey-wrapper {
+    //padding-bottom: 0.5em;
+    margin: 0 auto;
+}
+.survey-wrapper label.icon span {
+    cursor:pointer;
+    display:inline-block;
+    width:1.5em;
+    height:1.5em;
+    border-radius: 50%;
+    vertical-align: baseline;
+    vertical-align: -webkit-baseline-middle;
+    vertical-align: -moz-middle-with-baseline;
+    margin: 0 auto;
+    margin-bottom:10px;
+    margin-right: 10px;
+}
+.survey-wrapper label.icon input{
+  //position: absolute;
+  visibility: hidden;
+  //display:none;
+}
+.icon .dark-blue {
+    border: 5px solid #466ea5;
+    // transition: all .1s ease-in;
+    // &:hover {
+        // background-color:lighten(#466ea5, 50%);
+    // }
+}
+.icon .light-blue {
+    border: 5px solid #6390c6;
+    // transition: all .1s ease-in;
+    // &:hover {
+    //     background-color:lighten(#6390c6, 50%);
+    // }
+}
+
+.icon .red {
+    border: 5px solid $brand-color-7;
+    // transition: all .1s ease-in;
+    // &:hover {
+    //     background-color:lighten($brand-color-7, 50%);
+    // }
+}
+.icon .green {
+    border:5px solid #6e8f82;
+    // transition: all .1s ease-in;
+    // &:hover {
+    //     background-color:lighten(#6e8f82, 50%);
+    // }
+}
+
+.icon .orange {
+    border:5px solid #e77c22;
+    // transition: all .1s ease-in;
+    // &:hover {
+    //     background-color:lighten(#e77c22, 50%);
+    // }
+}
+.icon .light-gray {
+    border:5px solid #67696f;
+    // transition: all .1s ease-in;
+    // &:hover {
+    //     background-color:lighten(#67696f, 50%);
+    // }
+}
+.icon .dark-gray {
+    border:5px solid #282a32;
+    // transition: all .1s ease-in;
+    // &:hover {
+    //     background-color:lighten(#282a32, 50%);
+    // }
+}
+.survey-wrapper label {
+    font-weight: 500;
+    transition: all .1s ease-in;
+    &:hover {
+        //transform: scale(1.1);
+    }
+}
+label.answer_1:hover {
+    font-weight: 700;
+    .dark-blue {
+        background-color:lighten(#466ea5, 25%);
+    }
+}
+label.answer_2:hover {
+    font-weight: 700;
+    .light-blue {
+        background-color:lighten(#6390c6, 25%);
+    }
+}
+label.answer_3:hover {
+    font-weight: 700;
+    .red {
+        background-color:lighten($brand-color-7, 25%);
+    }
+}
+label.answer_4:hover {
+    font-weight: 700;
+    .green {
+        background-color:lighten(#6e8f82, 25%);
+    }
+}
+label.answer_5:hover {
+    font-weight: 700;
+    .orange {
+        background-color:lighten(#e77c22, 25%);
+    }
+}
+label.answer_6:hover {
+    font-weight: 700;
+    .dark-gray {
+        background-color:lighten(#282a32, 25%);
+    }
+}
+label.answer_7:hover {
+    font-weight: 700;
+    .light-gray {
+        background-color:lighten(#67696f, 25%);
+    }
+}
+
+.cp-selected {
+    font-weight: 700 !important;
+    text-decoration: underline;
+    .dark-blue {
+        background-color:darken(#466ea5, 10%);
+    }
+    .light-blue {
+        background-color:darken(#6390c6, 10%);
+    }
+    .red {
+        background-color:darken($brand-color-7, 10%);
+    }
+    .green {
+        background-color:darken(#6e8f82, 10%);
+    }
+    .orange {
+        background-color:darken(#e77c22, 10%);
+    }
+    .dark-gray {
+        background-color:lighten(#282a32, 10%);
+    }
+    .light-gray {
+        background-color:darken(#67696f, 10%);
+    }
+}

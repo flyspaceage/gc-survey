@@ -1,0 +1,145 @@
+//
+// Mobile Nav
+// --------------------------------------------------
+
+.mobile-nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    input[type=checkbox] {
+        position: absolute;
+        visibility: hidden;
+        left: -9999px;
+    }
+
+    ul {
+        @include reset-list-style;
+        background: $body-background;
+        display: none;
+        position: absolute;
+        top: $mobile-nav-header-height;
+        right: 0;
+        left: 0;
+        box-shadow: 0 1px 2px rgba(0,0,0,.25);
+        z-index: 2;
+        width: 100%;
+
+        li {
+            border-top: 1px solid #E6E6E6;
+            padding: 0;
+            margin: 0;
+            line-height: 1;
+
+            a {
+                display: block;
+                padding: 15px;
+            }
+        }
+    }
+
+    .toggle {
+        background: $mobile-nav-button-background-color;
+        width: $mobile-nav-button-width;
+        height: $mobile-nav-header-height;
+        display: block;
+        overflow: hidden;
+        text-indent: -9999px;
+        margin: 0 !important;
+        font-size: 0;
+        position: absolute;
+        right: 0;
+
+        span {
+            display: block;
+            position: absolute;
+            top: ($mobile-nav-button-height / 2) - ($mobile-nav-bar-thickness / 2);
+            left: $mobile-nav-button-pad;
+            right: $mobile-nav-button-pad;
+            height: $mobile-nav-bar-thickness;
+            background: $mobile-nav-button-icon-color;
+
+            &:before,
+            &:after {
+                position: absolute;
+                display: block;
+                left: 0;
+                width: 100%;
+                height: $mobile-nav-bar-thickness;
+                background-color: $mobile-nav-button-icon-color;
+                content: "";
+            }
+
+            &:before {
+                top: -$mobile-nav-bar-thickness - $mobile-nav-button-bar-space;
+            }
+
+            &:after {
+                bottom: -$mobile-nav-bar-thickness - $mobile-nav-button-bar-space;
+            }
+        }
+
+        span {
+            transition: background 0s $mobile-nav-button-transistion-duration;
+
+            &:before,
+            &:after {
+                transition-duration: $mobile-nav-button-transistion-duration, $mobile-nav-button-transistion-duration;
+                transition-delay: $mobile-nav-button-transistion-duration, 0s;
+            }
+
+            &:before {
+                transition-property: top, transform;
+            }
+
+            &:after {
+                transition-property: bottom, transform;
+            }
+        }
+    }
+
+    [id^=drop]:checked {
+
+        & + .toggle {
+
+            span {
+                background: none;
+
+                &:before {
+                    top: 0;
+                    transform: rotate(45deg);
+                }
+
+                &:after {
+                    bottom: 0;
+                    transform: rotate(-45deg);
+                }
+
+                &:before,
+                &:after {
+                    transition-delay: 0s, $mobile-nav-button-transistion-duration;
+                }
+            }
+
+            & + ul {
+                display: block !important;
+            }
+        }
+    }
+
+    @include responsive(large) {
+        position: static;
+
+        .toggle {
+            display: none;
+        }
+
+        ul {
+            display: block;
+            position: static;
+            box-shadow: none;
+        }
+    }
+}

@@ -1,0 +1,226 @@
+//
+// Form elements
+// --------------------------------------------------
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  // Chrome and Firefox set a `min-width: -webkit-min-content;` on fieldsets,
+  // so we reset that to ensure it behaves more like a standard block element.
+  // See https://github.com/twbs/bootstrap/issues/12359.
+  min-width: 0;
+}
+
+
+label {
+  display: inline-block;
+  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+// Normalize form controls
+//
+// While most of our form styles require extra classes, some basic normalization
+// is required to ensure optimum display with or without those classes to better
+// address browser inconsistencies.
+
+// Override content-box in Normalize (* isn't specific enough)
+input[type="search"] {
+  @include box-sizing(border-box);
+}
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9; // IE8-9
+  line-height: normal;
+}
+
+// Set the height of file controls to match text inputs
+input[type="file"] {
+  display: block;
+}
+
+// Make range inputs behave like textual form controls
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+// Focus for file, radio, and checkbox
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  @include tab-focus();
+}
+
+// Adjust output element
+output {
+  display: block;
+  padding-top: (5px + 1);
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $input-color;
+}
+
+/* Force form elements to inherit font styles */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: $base-font-size;
+}
+
+// Placeholder
+// -------------------------
+
+// Placeholder text gets special styles because when browsers invalidate entire lines if it doesn't understand a selector
+input,
+textarea {
+  @include placeholder();
+}
+
+// Common form controls
+//
+// Shared size and type resets for form controls. Apply `.form-control` to any
+// of the following form controls:
+//
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  width: 100%;
+  padding: 5px;
+  color: $input-color;
+  background-color: $input-background-color;
+  border: $input-border;
+  border-radius: $input-border-radius;
+  box-shadow: none;
+  box-sizing: border-box;
+  font-size: 16px;
+
+  &:focus {
+    outline: 0;
+    background-color: $input-background-color;
+    border-color: $brand-color-2;
+  }
+}
+
+select,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  height: 34px;
+}
+
+select {
+  @include gradient-vertical(#fff,#f2f2f2);
+}
+
+// Reset height for `textarea`s
+textarea {
+  height: auto;
+  resize: vertical;
+}
+
+// Search inputs in iOS
+//
+// This overrides the extra rounded corners on search inputs in iOS so that our
+// `.form-control` class can properly style them. Note that this cannot simply
+// be added to `.form-control` as it's not specific enough. For details, see
+// https://github.com/twbs/bootstrap/issues/11586.
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+// .form-group {
+//   margin-bottom: 15px;
+
+//   &.email {
+//     clear: both;
+//   }
+// }
+
+// button[type="submit"] {
+//   height: 34px;
+// }
+
+
+
+// .input-wrapper {
+  
+//   *:last-child {
+//     margin-bottom: 0;
+//   }
+// }
+
+// .input-wrapper + .input-wrapper {
+//   margin-top: $base-spacing-unit;
+// }
+
+// label {
+//   display: block;
+//   margin-bottom: 5px;
+// }
+
+// .radio, .checkbox {
+//   min-height: 20px;
+//   padding-left: 20px;
+// }
+
+// .radio input[type="radio"], .checkbox input[type="checkbox"] {
+//   float: left;
+//   margin-left: -20px;
+//   position: relative;
+//   top: 3px;
+// }
+
+// label.radio + label.radio, label.checkbox + label.checkbox {
+//   margin-top: $base-spacing-unit;
+//   font-weight: normal;
+// }
+
+// // Error
+// $error-color: #dc322f;
+
+// input.error,
+// textarea.error {
+//   color: $error-color;
+//   border-color: $error-color;
+//   box-shadow: 0 1px 1px rgba(220,50,47,.25);
+// }

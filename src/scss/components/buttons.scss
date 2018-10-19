@@ -1,0 +1,87 @@
+@mixin button {
+    background-color: $button-background;
+    border: 0;
+    border-radius: $button-radius;
+    box-shadow: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: $base-font-size;
+    font-weight: bold;
+    height: auto;
+    line-height: 1;
+    margin: 0;
+    padding: 9px 20px 11px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    vertical-align: middle;
+    @include transition(.2s);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: darken($button-background, 10%);
+        color: $button-text;
+        text-decoration: none;
+    }
+}
+
+@mixin button-primary {
+    background-color: $button-primary-background;
+    color: $button-primary-text;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: darken($button-primary-background, 10%);
+        color: $button-primary-text;
+    }
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+    margin-top: 10px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.btn-block {
+        width: 100%;
+    }
+}
+
+.btn + .btn {
+    margin-left: 10px;
+
+    // @include responsive(small) {
+    //     margin-left: 0;
+    //     width: 100%;
+    // }
+}
+
+.btn {
+    @include button;
+
+    &.btn-primary {
+        @include button-primary;
+    }
+
+    i {
+        margin-right: 5px;
+        @include opacity(.7);
+    }
+
+    &:hover i {
+        @include opacity(1);
+    }
+}

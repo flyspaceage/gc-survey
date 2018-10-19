@@ -1,0 +1,295 @@
+
+.methodology .carousel-container.blue .left-half {
+    background-image: url("../images/methodology/maps.png");
+    background-size: cover;
+    position: relative
+}
+
+.methodology .carousel-container.blue .left-half a {
+    display: block;
+    background: url("../images/methodology/explore-map@2x.png") no-repeat 50%;
+    background-size: 180px auto;
+    overflow: hidden;
+    text-indent: -9999px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    @include responsive(small) {
+    	position: relative;
+    	height: 200px;
+    }
+}
+
+.methodology .carousel-container.slick-slide a,
+.methodology .carousel-container.slick-slide li {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    -webkit-transform: translate3d(0, 20px, 0);
+    -moz-transform: translate3d(0, 20px, 0);
+    -o-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0)
+}
+
+.methodology .carousel-container.slick-slide.slick-active a,
+.methodology .carousel-container.slick-slide.slick-active li {
+    opacity: 1;
+    filter: alpha(opacity=1);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+
+.methodology .carousel-container.slick-active.blue .left-half a.resp-02,
+.methodology .carousel-container.slick-active.blue .left-half a.insight-02,
+.methodology .carousel-container.slick-active.blue .left-half li.resp-02,
+.methodology .carousel-container.slick-active.blue .left-half li.insight-02,
+.methodology .carousel-container.slick-active.orange .left-half a.resp-02,
+.methodology .carousel-container.slick-active.orange .left-half a.insight-02,
+.methodology .carousel-container.slick-active.orange .left-half li.resp-02,
+.methodology .carousel-container.slick-active.orange .left-half li.insight-02,
+.methodology .carousel-container.slick-active.green .left-half a.resp-02,
+.methodology .carousel-container.slick-active.green .left-half a.insight-02,
+.methodology .carousel-container.slick-active.green .left-half li.resp-02,
+.methodology .carousel-container.slick-active.green .left-half li.insight-02 {
+    transition-delay: .1s
+}
+
+.methodology .carousel-container.slick-active.blue .left-half a.resp-03,
+.methodology .carousel-container.slick-active.blue .left-half a.insight-03,
+.methodology .carousel-container.slick-active.blue .left-half li.resp-03,
+.methodology .carousel-container.slick-active.blue .left-half li.insight-03,
+.methodology .carousel-container.slick-active.orange .left-half a.resp-03,
+.methodology .carousel-container.slick-active.orange .left-half a.insight-03,
+.methodology .carousel-container.slick-active.orange .left-half li.resp-03,
+.methodology .carousel-container.slick-active.orange .left-half li.insight-03,
+.methodology .carousel-container.slick-active.green .left-half a.resp-03,
+.methodology .carousel-container.slick-active.green .left-half a.insight-03,
+.methodology .carousel-container.slick-active.green .left-half li.resp-03,
+.methodology .carousel-container.slick-active.green .left-half li.insight-03 {
+    transition-delay: .2s
+}
+
+.methodology .carousel-container.slick-active.blue .left-half a.resp-04,
+.methodology .carousel-container.slick-active.blue .left-half a.insight-04,
+.methodology .carousel-container.slick-active.blue .left-half li.resp-04,
+.methodology .carousel-container.slick-active.blue .left-half li.insight-04,
+.methodology .carousel-container.slick-active.orange .left-half a.resp-04,
+.methodology .carousel-container.slick-active.orange .left-half a.insight-04,
+.methodology .carousel-container.slick-active.orange .left-half li.resp-04,
+.methodology .carousel-container.slick-active.orange .left-half li.insight-04,
+.methodology .carousel-container.slick-active.green .left-half a.resp-04,
+.methodology .carousel-container.slick-active.green .left-half a.insight-04,
+.methodology .carousel-container.slick-active.green .left-half li.resp-04,
+.methodology .carousel-container.slick-active.green .left-half li.insight-04 {
+    transition-delay: .3s
+}
+
+.methodology .carousel-container.slick-active.blue .left-half a.resp-05,
+.methodology .carousel-container.slick-active.blue .left-half a.insight-05,
+.methodology .carousel-container.slick-active.blue .left-half li.resp-05,
+.methodology .carousel-container.slick-active.blue .left-half li.insight-05,
+.methodology .carousel-container.slick-active.orange .left-half a.resp-05,
+.methodology .carousel-container.slick-active.orange .left-half a.insight-05,
+.methodology .carousel-container.slick-active.orange .left-half li.resp-05,
+.methodology .carousel-container.slick-active.orange .left-half li.insight-05,
+.methodology .carousel-container.slick-active.green .left-half a.resp-05,
+.methodology .carousel-container.slick-active.green .left-half a.insight-05,
+.methodology .carousel-container.slick-active.green .left-half li.resp-05,
+.methodology .carousel-container.slick-active.green .left-half li.insight-05 {
+    transition-delay: .4s
+}
+
+.methodology .carousel-container.slick-active.blue .left-half a.resp-06,
+.methodology .carousel-container.slick-active.blue .left-half a.insight-06,
+.methodology .carousel-container.slick-active.blue .left-half li.resp-06,
+.methodology .carousel-container.slick-active.blue .left-half li.insight-06,
+.methodology .carousel-container.slick-active.orange .left-half a.resp-06,
+.methodology .carousel-container.slick-active.orange .left-half a.insight-06,
+.methodology .carousel-container.slick-active.orange .left-half li.resp-06,
+.methodology .carousel-container.slick-active.orange .left-half li.insight-06,
+.methodology .carousel-container.slick-active.green .left-half a.resp-06,
+.methodology .carousel-container.slick-active.green .left-half a.insight-06,
+.methodology .carousel-container.slick-active.green .left-half li.resp-06,
+.methodology .carousel-container.slick-active.green .left-half li.insight-06 {
+    transition-delay: .5s
+}
+
+.methodology .carousel-container.orange ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding: 20px 0
+}
+
+.methodology .carousel-container.orange ul:before,
+.methodology .carousel-container.orange ul:after {
+    content: "";
+    display: table
+}
+
+.methodology .carousel-container.orange ul:after {
+    clear: both
+}
+
+.methodology .carousel-container.orange ul li {
+    display: inline-block;
+    margin: 2px;
+    width: 150px;
+    height: 71px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    background-size: 150px auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5)
+}
+
+.methodology .carousel-container.orange ul li.resp-01 {
+    background-image: url("../images/methodology/resp-01.png")
+}
+
+.methodology .carousel-container.orange ul li.resp-02 {
+    background-image: url("../images/methodology/resp-02.png")
+}
+
+.methodology .carousel-container.orange ul li.resp-03 {
+    background-image: url("../images/methodology/resp-03.png")
+}
+
+.methodology .carousel-container.orange ul li.resp-04 {
+    background-image: url("../images/methodology/resp-04.png")
+}
+
+.methodology .carousel-container.orange ul li.resp-05 {
+    background-image: url("../images/methodology/resp-05.png")
+}
+
+.methodology .carousel-container.orange ul li.resp-06 {
+    background-image: url("../images/methodology/resp-06.png")
+}
+
+@media screen and (max-width: 374px) {
+    .methodology .carousel-container.orange ul li {
+        width: 140px;
+        margin: 1px;
+        background-size: 140px auto
+    }
+}
+
+.methodology .carousel-container.green ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 240px;
+    margin: 0 auto;
+    padding-top: 18px;
+    padding-bottom: 8px;
+
+    @include responsive(small) {
+    	padding: 18px 45px;
+    	width: auto;
+
+    	li {
+    		padding: 10px;
+    		line-height: 1.1 !important;
+    	}
+    }
+}
+
+.methodology .carousel-container.green ul:before,
+.methodology .carousel-container.green ul:after {
+    content: "";
+    display: table
+}
+
+.methodology .carousel-container.green ul:after {
+    clear: both
+}
+
+.methodology .carousel-container.green ul li {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    margin: 0 0 10px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 32px;
+    position: relative
+}
+
+.methodology .carousel-container.green ul li i {
+    width: 76px;
+    height: 76px;
+    display: block;
+    background-size: 76px auto;
+    position: absolute;
+    top: 50%;
+    margin-top: -34px;
+    z-index: 2;
+    left: -48px
+}
+
+.methodology .carousel-container.green ul li.insight-01 i {
+    background-image: url("../images/methodology/insight-01.png")
+}
+
+.methodology .carousel-container.green ul li.insight-02 i {
+    background-image: url("../images/methodology/insight-02.png");
+    left: auto;
+    right: -48px
+}
+
+.methodology .carousel-container.green ul li.insight-03 i {
+    background-image: url("../images/methodology/insight-03.png")
+}
+
+.methodology .carousel-container.green ul li.insight-04 i {
+    background-image: url("../images/methodology/insight-04.png");
+    left: auto;
+    right: -48px
+}
+
+.methodology .carousel-container.green ul li.insight-05 i {
+    background-image: url("../images/methodology/insight-05.png")
+}
+
+.methodology .carousel-container.green ul li.insight-06 i {
+    background-image: url("../images/methodology/insight-06.png");
+    left: auto;
+    right: -48px
+}
+
+@include responsive(medium) {
+	
+	.methodology .carousel-container {
+
+		-webkit-flex-direction: row-reverse;
+    	flex-direction: row-reverse;
+	}
+}
+
+// @keyframes fade-up {
+//     0% {
+//         opacity: 0;
+//         filter: alpha(opacity=0);
+//         -webkit-transform: translate3d(0, 20px, 0);
+//         -moz-transform: translate3d(0, 20px, 0);
+//         -o-transform: translate3d(0, 20px, 0);
+//         transform: translate3d(0, 20px, 0)
+//     }
+//     100% {
+//         opacity: 1;
+//         filter: alpha(opacity=1);
+//         -webkit-transform: translate3d(0, 0, 0);
+//         -moz-transform: translate3d(0, 0, 0);
+//         -o-transform: translate3d(0, 0, 0);
+//         transform: translate3d(0, 0, 0)
+//     }
+// }

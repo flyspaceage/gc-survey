@@ -1,0 +1,134 @@
+.reports,
+.library {
+	height: auto !important;
+
+	@include responsive(medium) {
+		padding-bottom: 50px;
+	}
+}
+
+.reports-wrapper {
+	max-width: 730px;
+	margin: 0 auto;
+}
+
+.reports-list {
+	@include reset-list-style;
+	margin: 0 -10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+	li {
+		margin: 0 0 20px;
+		padding: 0 10px;
+		width: 50%;
+		line-height: 1.2;
+
+		p {
+			font-size: 14px;
+			margin-bottom: 5px;
+			text-align: left;
+		}
+
+		@include responsive(medium) {
+			width: 33.333333%;
+		}
+
+		// @include responsive(large) {
+		// 	width: 25%;
+		// }
+
+		// @include responsive(xlarge) {
+		// 	width: 20%;
+		// }
+
+		a {
+			position: relative;
+			display: block;
+
+			img {
+				display: block;
+				width: 100%;
+				margin-bottom: 5px;
+				box-shadow: 0 2px 4px rgba(0,0,0,.3);
+			}
+
+			.content {
+				
+				text-align: left;
+
+				h3 {
+					font-size: 18px;
+					@include helvetica-condensed;
+					// font-weight: bold;
+					margin-bottom: 0;
+				}
+
+				p {
+					font-size: 14px;
+					display: none;
+					font-weight: bold;
+
+					& + p {
+						font-weight: normal;
+					}
+				}
+
+				@include responsive(medium) {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					overflow: hidden;
+					padding: 15px;
+					background: $brand-color-2;
+					color: white;
+					@include transition(.2s);
+					@include translate3d(0,100%,0);
+
+					h3 {
+						margin-bottom: 5px;
+					}
+
+					p {
+						display: block;
+
+						&:last-child {
+							position: absolute;
+							right: 10px;
+							bottom: 10px;
+							border: 1px solid rgba(255,255,255,.5);
+							padding: 5px;
+							// border-radius: 4px;
+							font-weight: bold;
+
+							&:hover {
+								border-color: white;
+							}
+						}
+					}
+				}
+			}
+
+			@include responsive(medium) {
+
+				overflow: hidden;
+				box-shadow: 0 2px 4px rgba(0,0,0,.3);
+
+				img {
+					margin-bottom: 0;
+					box-shadow: none;
+				}
+				
+				&:hover {
+
+					.content {
+						@include translate3d(0,0,0);
+					}
+				}
+			}
+		}
+	}
+}

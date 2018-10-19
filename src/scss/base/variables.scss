@@ -1,0 +1,69 @@
+/* ===================================================
+ * VARIABLES
+ * =================================================== */
+
+$brand-color-1: #4A71A2; // dark blue
+$brand-color-2: #6692C2; // light blue
+$brand-color-3: #719184; // green
+$brand-color-4: #E47C3C; // orange
+$brand-color-5: #DAE2F0; // light light blue
+$brand-color-6: #C7C7C7; // light gray
+$brand-color-7: #C34B57; // red
+
+
+// Scaffolding
+// -------------------------
+$body-background:        			white;
+$text-color:             			#67696F;
+
+
+// Links
+// -------------------------
+$link-color:             			$brand-color-1;
+$link-color-hover:        			darken($link-color, 15%);
+
+
+// Typography
+// -------------------------
+$sans-font-family:        			"Helvetica Neue", sans-serif;
+$base-font-size:          			16px;
+$mobile-font-size:          		14px;
+$base-font-family:        			$sans-font-family;
+$base-line-height:        			1.275;
+
+
+// Component sizing
+// -------------------------
+$base-spacing-unit:					15px;
+
+
+// Buttons
+// -------------------------
+$button-radius: 20px;
+$cp-button-radius: 6px;
+$button-background: $brand-color-2;
+$button-primary-background: $brand-color-4;
+$button-text: white;
+$button-primary-text: white;
+
+
+// Form Inputs
+// -------------------------
+$input-color: $text-color;
+$input-background-color: white;
+$input-border: 1px solid $brand-color-5;
+$input-border-radius: 4px;
+$placeholder-text: #999;
+
+
+// Mobile Nav
+// -------------------------
+$mobile-nav-header-height: 54px;
+$mobile-nav-button-width: 50px;
+$mobile-nav-button-height: $mobile-nav-header-height;
+$mobile-nav-bar-thickness: 2px;
+$mobile-nav-button-pad: 15px;
+$mobile-nav-button-bar-space: 5px;
+$mobile-nav-button-transistion-duration: 0.1s;
+$mobile-nav-button-background-color: transparent;
+$mobile-nav-button-icon-color: $text-color;

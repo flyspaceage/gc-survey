@@ -1,0 +1,793 @@
+.insights {
+
+	p {
+
+		a {
+			font-weight: bold;
+			white-space: nowrap;
+		}
+
+		.btn {
+			margin-left: 5px;
+		}
+	}
+
+	.carousel-container {
+
+		.left-half {
+			text-align: left;
+			padding: $base-spacing-unit;
+
+			h3 {
+				text-align: left;
+			}
+		}
+
+		.right-half {
+			padding: 0;
+		}
+
+		@include responsive(medium) {
+
+			.left-half {
+				width: 33.333333%;
+				padding: 30px;
+			}
+
+			.right-half {
+				width: 66.66667%;
+			}
+		}
+	}
+
+	@include responsive(small) {
+
+		p .btn {
+			display: none;
+			// display: block;
+			// width: 135px;
+			// margin: 10px auto;
+			position: absolute;
+			top: -1px;
+			right: 20px;
+			font-size: 14px;
+			padding: 5px 15px 6px;
+		}
+	}
+}
+
+.insight-01-stage {
+	position: relative;
+	height: 365px;
+
+	.year-key {
+		position: absolute;
+		// top: 15px;
+		// right: 100px;
+		font-size: 12px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		// bottom: 0;
+		top: 40px;
+		text-align: center;
+		display: inline-block;
+
+		i {
+			display: inline-block;
+			width: 8px;
+			height: 8px;
+			margin-right: 1px;
+		}
+
+		.year-15 i {
+			background: $brand-color-4;
+		}
+
+		.year-16 i {
+			background: $brand-color-2;
+		}
+	}
+
+	// .insight-charts {
+	// 	font-size: 12px;
+	// 	font-weight: bold;
+	// 	text-align: center;
+	// 	width: 60px;
+	// 	height: 142px;
+	// 	position: absolute;
+	// 	z-index: 3;
+	// 	left: 50%;
+	// 	top: 9px;
+
+	// 	img {
+	// 		width: 60px;
+	// 		position: absolute;
+	// 		bottom: 0;
+	// 		// left: -2px;
+	// 		@include opacity(.5);
+	// 	}
+	// }
+
+	
+	// [class*="insight-person"] {
+	// 	@include opacity(.5);
+	// 	@include transition(.1s);
+	// 	z-index: 2;
+	// }
+
+	.insight-person {
+		@include absolute;
+		@include opacity(1);
+		// transition: .3s;
+	}
+
+	.insight-country {
+		position: absolute;
+		width: 100%;
+		line-height: 1;
+	}
+
+	.insight-01,
+	.insight-02,
+	.insight-03,
+	.insight-04,
+	.insight-05 {
+		height: 341px;
+		position: absolute;
+		bottom: 0;
+		transition-delay: 0;
+
+		&:hover {
+			z-index: 3;
+			@include opacity(.3);
+
+			.insight-person {
+				@include opacity(.3);
+				transition-delay: 0;
+			}
+
+			.insight-charts img {
+				@include opacity(1);
+			}
+		}
+	}
+
+	.insight-01 {
+		width: 25%;
+		left: 5%;
+
+		.insight-person {
+			background: url("../images/insights/001/australia.png") no-repeat 0 100%;
+			// background-size: auto 301px; // 524 x 602
+
+		}
+		
+		&:hover {
+		background: url("../images/insights/001/australiaSelect.png") no-repeat 0 100%;
+		// background-size: 115px 321px;
+		}
+
+		.insight-charts {
+			margin-left: -32px;
+
+			.insight-country {
+				top: 52px;
+			}
+		}
+
+		&:hover .insight-person {
+			background-position-x: -131px;
+		}
+	}
+
+	.insight-02 {
+		width: 25%;
+		left: 28%;
+
+		.insight-person{
+			background: url("../images/insights/001/china.png") no-repeat 0 100%;
+			// background-size: auto 342px; // 468 684
+		}
+
+		&:hover {
+		background: url("../images/insights/001/chinaSelect.png") no-repeat 0 100%;
+		// background-size: 115px 321px;
+		}
+
+		.insight-charts {
+			margin-left: -41px;
+
+			.insight-country {
+				top: 8px;
+			}
+		}
+
+		&:hover .insight-person {
+			background-position-x: -117px;
+		}
+	}
+
+	.insight-03 {
+		width: 25%;
+		left: 50%;
+
+		.insight-person{
+			background: url("../images/insights/001/uk.png") no-repeat 0 100%;
+			// background-size: auto 303px; // 620 606
+		}
+
+		&:hover {
+		background: url("../images/insights/001/ukSelect.png") no-repeat 0 100%;
+		// background-size: 115px 321px;
+		}
+
+		.insight-charts {
+			margin-left: -30px;
+
+			.insight-country {
+				top: 42px;
+			}
+		}
+
+		&:hover .insight-person {
+			background-position-x: -155px;
+		}
+	}
+
+	.insight-04 {
+		width: 25%;
+		left: 73%;
+
+		.insight-person{
+			background: url("../images/insights/001/usa.png") no-repeat 0 100%;
+			// background-size: auto 321px; // 456 642
+		}
+
+		&:hover {
+		background: url("../images/insights/001/usaSelect.png") no-repeat 0 100%;
+		// background-size: 115px 321px;
+		}
+
+		.insight-charts {
+			margin-left: -37px;
+
+			.insight-country {
+				top: 60px;
+			}
+		}
+
+		&:hover .insight-person {
+			background-position-x: -114px;
+		}
+	}
+
+	// .insight-05 {
+	// 	width: 134px;
+	// 	left: 362px;
+
+	// 	.insight-person{
+	// 		background: url("../images/insights/01/05-us.png") no-repeat 0 100%;
+	// 		background-size: auto 298px; // 536 596
+	// 	}
+
+	// 	.insight-charts {
+	// 		margin-left: -30px;
+
+	// 		.insight-country {
+	// 			top: 45px;
+	// 		}
+	// 	}
+
+	// 	&:hover .insight-person {
+	// 		background-position-x: -134px;
+	// 	}
+	//}
+}
+
+.insight-02-stage {
+	position: relative;
+	height: 365px;
+
+	.chart-container {
+		// padding: 61px 0 0 10px;
+		background: url("../images/insights/002/map.png") no-repeat 0 100%;
+		background-position: center; 
+		@include cf;
+		overflow: hidden;
+
+		@include responsive(small) {
+			display: none;
+		}
+	}
+
+	[class*="chart-bar"] {
+		background: url("../images/insights/chart-02.png") no-repeat 0 100%;
+		background-size: 445px 304px;
+		height: 304px;
+		width: 10%;
+		float: left;
+		// overflow: hidden;
+		text-indent: -9999px;
+		margin-right: 6px;
+		position: relative;
+		@include opacity(.5);
+		@include transition(.1s);
+		z-index: 2;
+
+		&:before {
+			// background: url("../images/insights/chart-02-armss.png") no-repeat 100% 0;
+			// background-size: 498px 70px;
+			position: absolute;
+			top: -55px;
+			right: 5px;
+			content: '';
+			width: 498px;
+			height: 70px;
+			@include translate3d(-100%,0,0);
+			@include transition(.3s);
+			z-index: 1;
+		}
+
+		&:hover {
+			@include opacity(1);
+
+			&:before {
+				@include translate3d(-10px,0,0);
+			}
+		}
+	}
+
+	.mobile-chart {
+		background: url("../images/insights/chart-02-mobile.png") no-repeat 0 100%;
+		background-size: 482px 304px;
+		height: 304px;
+		// width: 482px;
+		width: 10%;
+
+		@include responsive(medium) {
+			display: none;
+		}
+	}
+
+	// .chart-bar-key {
+	// 	background: url("../images/insights/chart-02-key.png") no-repeat 0 100%;
+	// 	background-size: 34px 172px;
+	// 	width: 34px;
+	// 	@include opacity(1);
+	// 	margin-right: 8px;
+
+	// 	&:before {
+	// 		@include translate3d(0,0,0);
+	// 		display: none;
+	// 	}
+	// }
+
+	// .chart-bar-02 {
+	// 	background-position-x: -24px;
+	// }
+
+	// .chart-bar-03 {
+	// 	background-position-x: -48px;
+	// }
+
+	// .chart-bar-04 {
+	// 	background-position-x: -72px;
+	// }
+
+	// .chart-bar-05 {
+	// 	background-position-x: -96px;
+	// }
+
+	// .chart-bar-06 {
+	// 	background-position-x: -120px;
+	// }
+
+	// .chart-bar-07 {
+	// 	background-position-x: -143px;
+	// }
+
+	// .chart-bar-08 {
+	// 	background-position-x: -166px;
+	// }
+
+	// .chart-bar-09 {
+	// 	background-position-x: -190px;
+	// }
+
+	// .chart-bar-10 {
+	// 	background-position-x: -214px;
+	// }
+
+	.chart-bar-19 {
+		background-position-x: -428px;
+		background: url("../images/insights/002/chart1.png") no-repeat 0 100%;
+
+	}
+	.chart-bar-18 {
+		background-position-x: -404px;
+		background: url("../images/insights/002/chart2.png") no-repeat 0 100%;
+
+	}
+	.chart-bar-17 {
+		background-position-x: -381px;
+		background: url("../images/insights/002/chart3.png") no-repeat 0 100%;
+
+	}
+	.chart-bar-16 {
+		background-position-x: -357px;
+		background: url("../images/insights/002/chart4.png") no-repeat 0 100%;
+
+	}
+	.chart-bar-15 {
+		background-position-x: -333px;
+		background: url("../images/insights/002/chart5.png") no-repeat 0 100%;
+
+	}
+	.chart-bar-14 {
+		background-position-x: -310px;
+		background: url("../images/insights/002/chart6.png") no-repeat 0 100%;
+
+	}
+	.chart-bar-13 {
+		background-position-x: -286px;
+		background: url("../images/insights/002/chart7.png") no-repeat 0 100%;
+
+	}
+	.chart-bar-12 {
+		background-position-x: -262px;
+		background: url("../images/insights/002/chart8.png") no-repeat 0 100%;
+	}
+}
+
+.insight-03-stage {
+	position: relative;
+	height: 365px;
+	overflow: hidden;
+
+	.insight-charts {
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		width: 80px;
+		height: 170px;
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		img {
+			width: 60px;
+			position: absolute;
+			left: 9px;
+			bottom: 0;
+			max-width: none;
+			@include opacity(.5);
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			background: url("../images/insights/star.png") no-repeat;
+			background-size: 315px 290px;
+			height: 290px;
+			width: 315px;
+			top: 151px;
+			left: -176px;
+			@include transition(.4s);
+		}
+
+		&:hover {
+
+			img {
+				@include opacity(1);
+			}
+
+			&:after {
+				background-image: url("../images/insights/star-hand.png");
+			}
+		}
+	}
+
+	.insight-country {
+		position: absolute;
+		width: 100%;
+		line-height: 1;
+	}
+
+	.insight-01,
+	.insight-02,
+	.insight-03,
+	.insight-04,
+	.insight-05 {
+		height: 170px;
+		position: absolute;
+		top: 30px;
+		left: 10px;
+	}
+
+	.insight-01 {
+		z-index: 5;
+
+		.insight-country {
+			top: 27px;
+		}
+	}
+
+	.insight-02 {
+		left: 106px;
+		z-index: 4;
+	}
+
+	.insight-03 {
+		left: 206px;
+		z-index: 3;
+
+		.insight-country {
+			top: 15px;
+		}
+	}
+
+	.insight-04 {
+		left: 306px;
+		z-index: 2;
+
+		.insight-country {
+			top: 48px;
+		}
+	}
+
+	.insight-05 {
+		left: 406px;
+		z-index: 1;
+
+		.insight-country {
+			top: 20px;
+		}
+	}
+}
+
+
+// animations
+
+.slick-slide {
+
+	[class*="insight-0"] {
+	    @include opacity(0);
+	    @include transition(.5s);
+	    @include translate3d(0, 20px, 0);
+
+	    // .insight-charts {
+	    // 	@include opacity(0);
+		   //  @include transition(1s);
+		   //  @include translate3d(0, 20px, 0);
+
+		   //  img {
+		   //  	transition: 1s;
+		   //  	transform: scale(.1);
+		   //  	transform-origin: 50% 100%;
+		   //  }
+	    // }
+	}
+
+	.insight-02-stage [class*="chart-bar-"] {
+		transform-origin: 50% 100%;
+	}
+
+	.year-key {
+		@include opacity(0);
+	    @include transition(1s);
+	    @include translate3d(0, 20px, 0);
+	}
+}
+
+.animate .slick-active {
+
+	[class*="insight-0"] {
+		@include opacity(1);
+	    @include translate3d(0, 0, 0);
+
+	    .insight-charts {
+	    	// @include opacity(1);
+	    	// @include translate3d(0, 0, 0);
+
+	    	// img {
+	    	// 	transform: scale(1);
+	    	// 	// @include opacity(1);
+	    	// }
+	    	animation: 1.4s chart-up ease;
+	    }
+	}
+
+	.year-key {
+		@include opacity(1);
+	    @include translate3d(0, 0, 0);
+	}
+
+	.insight-02 {
+		transition-delay: .1s;
+
+		.insight-charts {
+			transition-delay: .1s;
+
+			// img {
+			// 	transition-delay: .1s;
+			// }
+		}
+	}
+
+	.insight-03 {
+		transition-delay: .2s;
+
+		.insight-charts {
+			transition-delay: .2s;
+
+			// img {
+			// 	transition-delay: .2s;
+			// }
+		}
+	}
+
+	.insight-04 {
+		transition-delay: .3s;
+
+		.insight-charts {
+			transition-delay: .3s;
+		}
+	}
+
+	.insight-05 {
+		transition-delay: .4s;
+
+		.insight-charts {
+			transition-delay: .4s;
+		}
+	}
+
+	.insight-02-stage [class*="chart-bar-"] {
+		animation: 1.4s chart-up ease;
+	}
+}
+
+
+@keyframes chart-up {
+    0% {
+        @include opacity(0);
+		transform: scale(.1);
+    }
+    50% {
+        @include opacity(1);
+		transform: scale(1);
+    }
+
+}
+
+.insight-mobile-01,
+.insight-mobile-02,
+.insight-mobile-03 {
+	display: none;
+	position: relative;
+	text-align: center;
+	
+
+	&:after {
+		@include absolute;
+		background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,.3) 100%);
+		left: auto;
+		width: 15px;
+		content: '';
+		z-index: 3;
+	}
+
+	.insight-mobile-scroller {
+		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
+		padding: 15px 15px 0;
+		text-align: center;
+		position: relative;
+
+		&:after {
+			@include absolute;
+			background: #F7F7F8;
+			width: 15px;
+			content: '';
+			z-index: 4;
+		}
+	}
+}
+
+
+// mobile
+@include responsive(small) {
+	.insight-01-stage,
+	.insight-02-stage,
+	.insight-03-stage {
+		display: none;
+	}
+
+	.insight-mobile-01,
+	.insight-mobile-02,
+	.insight-mobile-03 {
+		display: block;
+
+		img {
+			max-width: none;
+			position: relative;
+		}
+	}
+
+	.insight-mobile-01 {
+
+		.insight-mobile-scroller:after {
+			left: 494px;
+		}
+
+		img {
+			width: 479px;
+		}
+	}
+
+	.insight-mobile-02 {
+
+		.insight-mobile-scroller {
+			padding-bottom: 15px;
+
+			&:after {
+				left: 497px;
+			}
+		}
+
+		img {
+			width: 482px;
+
+		}
+	}
+
+	.insight-mobile-03 {
+
+		.insight-mobile-scroller {
+			padding-bottom: 20px;
+
+			&:after {
+				left: 511px;
+			}
+		}
+
+		img {
+			width: 496px;
+		}
+	}
+
+	.carousel-box-shadow {
+		margin-right: -10px;
+		margin-left: -10px;
+		box-shadow: none;
+
+		@media screen and (max-width: 374px) {
+			margin-right: -5px;
+			margin-left: -5px;
+		}
+
+		.left-half p {
+			margin-bottom: 0;
+		}
+
+		.carousel-container {
+			float: none;
+			display: block;
+			margin-bottom: 15px;
+			border-top: 1px solid #ddd;
+			box-shadow: 0 2px 4px rgba(0,0,0,.3);
+		}
+
+		.slick-prev,
+		.slick-next,
+		.slick-dots {
+			display: none !important;
+		}
+	}
+}
+
+
+h3 span {
+	white-space: nowrap;
+}
