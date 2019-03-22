@@ -1,8 +1,8 @@
 ## 1. Create a Server
 
-`docker run --name manpower-lamp -p 5050:80 -dti -v ${PWD}:/var/www/html jschnor/lamp`
+`docker run --name poll-lamp -p 5050:80 -dti -v ${PWD}:/var/www/html jschnor/lamp`
 
-If you want to ssh into the container, use `docker exec -ti manpower-lamp bash`
+If you want to ssh into the container, use `docker exec -ti poll-lamp bash`
 
 
 ## 2. Visit the site in your browser
